@@ -1,0 +1,30 @@
+{{#partial "styles"}}
+    <link rel='stylesheet' href='/css/hero.css'>
+{{/partial}}
+
+{{#partial "content"}}
+    <div class="header">
+    <h1>Post Squad!</h1>
+    </div>
+
+<form action="/squad/new" method = "POST" class="form-group">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" class="form-control">
+
+    <label for="squadSize">Squad Size</label>
+    <input id="squadSize" name="squadSize" type="text" class="form-control">
+
+    <label for="cause">Cause</label>
+    <input id="cause" name="cause" type="text" class="form-control"><br>
+
+
+    <button type="submit" class="btn btn-success">Add Squad</button>
+</form>
+<div class="button-all">
+    <a href="/squad/list" class="btn btn-warning">Click to view your Squad List</a>
+</div>
+
+
+{{/partial}}
+
+{{> layout.hbs}}

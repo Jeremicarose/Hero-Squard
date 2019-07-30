@@ -1,0 +1,27 @@
+{{#partial "content"}}
+    <div class="header">
+    <h1>Squads</h1>
+    </div>
+
+    {{#if squads}}
+        {{#each squads}}
+            <div class="list">
+                <ul>
+                    <li><p> Squad Name: <span>{{name}}</span></p>
+                        <p> Squad Size: {{squadSize}}</p>
+                        <p>Cause: {{cause}}</p> </li>
+
+                </ul>
+
+            </div>
+
+
+
+        {{/each}}
+    {{else}}
+        <div class="success">
+        <p>No Squads yet!</p>
+        </div>
+    {{/if}}
+{{/partial}}
+{{>layout.hbs}}
